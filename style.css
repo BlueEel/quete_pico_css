@@ -1,0 +1,136 @@
+  [data-theme="light"],
+  :root:not([data-theme="dark"]) {
+    --primary: #2D54A0;
+    --primary-hover: #1b386b;
+    --primary-focus: rgba(57, 73, 171, 0.125);
+    --primary-inverse: #FFF;
+    --h1-color: hsl(205, 30%, 15%);
+    --typography-spacing-vertical: 0rem;
+  }
+  
+body {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+nav, nav ul, button, footer {
+    background-color: var(--primary);
+    color: #cfcfcf;
+    border-radius: 0px;
+    padding-right: .5rem;
+    padding-left: .5rem;
+}
+
+a {
+    color: var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul>li:hover {
+    color: white;
+}
+nav ul>li>strong, button {
+    color: white;
+}
+
+nav details[role=list] summary, nav details[role=list] summary:not([role]) {
+    border-radius: 0;
+    border: none;
+}
+
+nav details[role=list] summary, nav details[role=list] summary:not([role]):hover {
+    background-color: var(--primary-hover) ; 
+}
+
+
+h1, h2, h5 {
+    color: var(--h1-color) ;
+}
+
+h1 {
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem ;
+}
+
+
+article {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+
+article > img {
+    margin-bottom: 4rem;
+}
+article > h5 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+article > p {
+    padding-top: 0rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+article > button {
+    margin-top: auto;
+    margin-bottom: 0;
+    align-self: flex-end;
+} 
+
+/* ----------PARTIE SECTION & FOOTER---------- */
+
+section {
+    background-color: #cfcfcf;
+    width: 100%;
+    height: 14rem;
+    margin: 0;
+}
+
+p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body > footer {
+    padding: 1rem;
+    margin-top: auto;
+}
+footer > p {
+    color: var(--primary-inverse);
+}
+
+
+/* ----------PARTIE REPONSIVE---------- */
+
+@media (max-width: 992px){
+        article > p {
+            display: none;
+        }
+}
+
+@media only screen and (max-width: 992px) and (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(auto-fit,minmax(33%,2fr));
+    }
+}
